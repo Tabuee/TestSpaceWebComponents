@@ -1,0 +1,23 @@
+{
+  "name": "knockoutcomponentlib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "node minimal/twig.js",
+    "build": "browserify -p [ tsify --project tsconfig.json ] --debug minimal/src/index.ts > minimal/dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "knockout": "^3.5.0",
+    "tsify": "^4.0.1",
+    "twig": "^1.13.2",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "@types/node": "^11.9.5"
+  }
+}

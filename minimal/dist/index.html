@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script src="bundle.js"></script>
+</head>
+
+
+<body>
+
+<div data-controller="SubscribeForm">
+    <form>
+        LastName: <input placeholder="firstName" type="text" data-bind="value: firstName, event: {blur: blur}"
+                         value="123"><br>
+        FirstName: <input placeholder="lastName" type="text" data-bind="value: lastName, event: {blur: blur}"
+                          value="123"><br>
+        E-Mail: <input placeholder="email" type="text" data-bind="value: email, event: {blur: blur}"
+                       value="123"><br>
+        <button data-bind="click: submit, enable: enabled" disabled>Subscribe Already!</button>
+    </form>
+</div>
+
+
+</body>
+</html>
