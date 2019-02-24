@@ -78,6 +78,21 @@
             </PaintGroupHighlightMap>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/minimal/src/app/Clock/ClockController.ts">
+          <value>
+            <PaintGroupHighlightMap>
+              <option name="paintGroups">
+                <map>
+                  <entry key="0">
+                    <value>
+                      <EditorHighlightsForPaintGroup />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PaintGroupHighlightMap>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/minimal/src/app/Clock/ClockTemplate.twig">
           <value>
             <PaintGroupHighlightMap>
@@ -154,6 +169,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/minimal/src/app/SubscribeForm/SubscribeForm.twig">
+          <value>
+            <PaintGroupHighlightMap>
+              <option name="paintGroups">
+                <map>
+                  <entry key="0">
+                    <value>
+                      <EditorHighlightsForPaintGroup />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PaintGroupHighlightMap>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/minimal/src/app/SubscribeForm/SubscribeFormTemplate.twig">
           <value>
             <PaintGroupHighlightMap>
               <option name="paintGroups">
