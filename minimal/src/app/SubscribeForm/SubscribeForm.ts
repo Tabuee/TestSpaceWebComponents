@@ -1,28 +1,10 @@
 import * as ko from "knockout";
+import {BaseViewModel} from '../BaseViewModel';
+import {SubscribeFormViewModel} from './SubscribeFormViewModel';
 
-export class SubscribeForm {
-    public firstName: ko.Observable;
-    public lastName: ko.Observable;
-    public email: ko.Observable;
-    public enabled: ko.Observable;
-
-    public constructor() {
-        this.firstName = ko.observable('firstName');
-        this.lastName = ko.observable('lastName');
-        this.email = ko.observable('');
-        this.enabled = ko.observable(false);
-    }
-
-    public blur() {
-        this.enabled(this.email.peek() !== '');
-    }
-
-    public submit() {
-        alert(`
-        sending: 
-        firstName: ${this.firstName.peek()}
-        lastName: ${this.lastName.peek()}
-        email: ${this.email.peek()}
-        `);
-    }
+export class SubscribeForm extends BaseViewModel<SubscribeFormViewModel> implements SubscribeFormViewModel{
+    public firstName: ko.Observable<string> = ko.observable<string>('firstName');
+    public lastName: ko.Observable<string> = ko.observable<string>('lastName');
+    public email: ko.Observable<string> = ko.observable<string>('');
+    public enabled: ko.Observable<boolean> = ko.observable<boolean>(false);
 }

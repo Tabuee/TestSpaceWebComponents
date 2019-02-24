@@ -9,7 +9,7 @@ export abstract class BaseViewModel<T> implements ViewModel {
     }
 
     public event(name: string) {
-        this.eventHandler(name);
+        return this.eventHandler.bind(this, name);
     }
 
     public setEventHandler(eventHandler: any) {

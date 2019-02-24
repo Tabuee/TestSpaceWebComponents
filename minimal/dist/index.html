@@ -123,13 +123,13 @@
 <body>
 <div data-controller="SubscribeForm">
     <form>
-        LastName: <input placeholder="firstName" type="text" data-bind="value: firstName, event: {blur: blur}"
+        LastName: <input placeholder="firstName" type="text" data-bind="value: firstName"
                          value="123"><br>
-        FirstName: <input placeholder="lastName" type="text" data-bind="value: lastName, event: {blur: blur}"
+        FirstName: <input placeholder="lastName" type="text" data-bind="value: lastName"
                           value="123"><br>
-        E-Mail: <input placeholder="email" type="text" data-bind="value: email, event: {blur: blur}"
+        E-Mail: <input placeholder="email" type="text" data-bind="value: email"
                        value="123"><br>
-        <button data-bind="click: submit, enable: enabled" disabled>Subscribe Already!</button>
+        <button data-bind="click: event('submit'), enable: enabled" disabled>Subscribe Already!</button>
     </form>
 </div>
 

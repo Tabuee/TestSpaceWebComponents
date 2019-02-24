@@ -1,0 +1,13 @@
+{
+  "name": "minimal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "twig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "node twig.js",
+    "build": "browserify -p [ tsify --project tsconfig.json ] --debug src/index.ts > dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
