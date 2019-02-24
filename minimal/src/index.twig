@@ -1,8 +1,11 @@
 <html>
 <head>
+    {% include 'minimal/src/style.twig' %}
     <script src="bundle.js"></script>
 </head>
 <body>
-{% include 'minimal/src/app/SubscribeForm/SubscribeForm.twig' with {label: '123' } %}
+{% include 'minimal/src/app/SubscribeForm/SubscribeFormTemplate.twig' with {label: '123' } %}
+{% include 'minimal/src/app/Clock/ClockTemplate.twig' %}
+{% include 'minimal/src/app/Clock/ClockTemplate.twig' with {showMs: true} %}
 </body>
 </html>

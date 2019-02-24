@@ -1,8 +1,10 @@
 import {SubscribeForm} from './app/SubscribeForm/SubscribeForm';
 import * as ko from 'knockout';
+import {Clock} from './app/Clock/Clock';
 
 let controllers = {
-    'SubscribeForm': SubscribeForm
+    'SubscribeForm': SubscribeForm,
+    'AnalogClock': Clock
 };
 
 function ready(fn: () => void) {
@@ -22,16 +24,10 @@ ready(() => {
             //@ts-ignore
             let ctrlName = element.dataset.controller;
             let contrl = controllers[ctrlName];
-            let options = {
-                viewModel: contrl,
-                template: element.innerHTML,
-                name: ctrlName
-            };
-            ko.components.register(ctrlName, options);
+            //@ts-ignore
+            ko.applyBindings(new contrl(element.dataset), element);
 
             element.setAttribute('data-bind', 'component: "' + ctrlName+'"');
         }
-        // @ts-ignore
-        ko.applyBindings();
     },5000);
 });
