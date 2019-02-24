@@ -19,8 +19,8 @@ export class ClockController {
         }
 
         setInterval(this.update.bind(this), analogInterval);
-        vm.subscribe('minuteDegreesN', (param) => {console.log(param);});
-        vm.setEventHandler((event: string) => {
+        this.vm.subscribe('minuteDegreesN', (param) => {console.log(param);});
+        this.vm.setEventHandler((event: string) => {
             console.log(event);
         });
     }
