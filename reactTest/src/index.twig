@@ -6,7 +6,11 @@
 
 <div id="root">
     <SubscribeForm>
-        {% include 'src/SubscribeFormTemplate.twig' with {label: '123' } %}
+        {% include 'src/SubscribeForm/SubscribeFormTemplate.twig' with {
+            firstName_args: ' value="123"',
+            lastName_args: ' value="123"',
+            email_args: ' value="123"'
+        } %}
     </SubscribeForm>
 </div>
 
