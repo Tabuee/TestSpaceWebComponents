@@ -1,11 +1,11 @@
 import {SubscribeForm} from './app/SubscribeForm/SubscribeForm';
 import * as ko from 'knockout';
-import {Clock} from './app/Clock/Clock';
+import {DefaultClock} from './app/Clock/DefaultClock';
 import {ClockController} from './app/Clock/ClockController';
 
 let controllers = {
     'SubscribeForm': {controller: undefined, vm: SubscribeForm},
-    'AnalogClock': {controller: ClockController, vm: Clock}
+    'AnalogClock': {controller: ClockController, vm: DefaultClock}
 };
 
 function ready(fn: () => void) {

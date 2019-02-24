@@ -1,10 +1,10 @@
-import {Clock} from './Clock';
+import {DefaultClock} from './DefaultClock';
 
 export class ClockController {
-    private vm: any;
+    private vm: DefaultClock;
     private showMs: boolean;
 
-    public constructor(vm: Clock, params: any) {
+    public constructor(vm: DefaultClock, params: any) {
         this.vm = vm;
 
         this.showMs = false;
@@ -19,6 +19,10 @@ export class ClockController {
         }
 
         setInterval(this.update.bind(this), analogInterval);
+        vm.subscribe('minuteDegreesN', (param) => {console.log(param);});
+        vm.setEventHandler((event: string) => {
+            console.log(event);
+        });
     }
 
     private update() {

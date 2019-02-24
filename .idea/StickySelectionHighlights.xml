@@ -48,6 +48,21 @@
             </PaintGroupHighlightMap>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/minimal/src/app/BaseViewModel.ts">
+          <value>
+            <PaintGroupHighlightMap>
+              <option name="paintGroups">
+                <map>
+                  <entry key="0">
+                    <value>
+                      <EditorHighlightsForPaintGroup />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PaintGroupHighlightMap>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/minimal/src/app/Clock/AnalogClock.ts">
           <value>
             <PaintGroupHighlightMap>
@@ -94,6 +109,36 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/minimal/src/app/Clock/ClockTemplate.twig">
+          <value>
+            <PaintGroupHighlightMap>
+              <option name="paintGroups">
+                <map>
+                  <entry key="0">
+                    <value>
+                      <EditorHighlightsForPaintGroup />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PaintGroupHighlightMap>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/minimal/src/app/Clock/ClockViewModel.ts">
+          <value>
+            <PaintGroupHighlightMap>
+              <option name="paintGroups">
+                <map>
+                  <entry key="0">
+                    <value>
+                      <EditorHighlightsForPaintGroup />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PaintGroupHighlightMap>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/minimal/src/app/Clock/DefaultClock.ts">
           <value>
             <PaintGroupHighlightMap>
               <option name="paintGroups">
@@ -214,6 +259,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/minimal/src/app/TextInput/TextInput.twig">
+          <value>
+            <PaintGroupHighlightMap>
+              <option name="paintGroups">
+                <map>
+                  <entry key="0">
+                    <value>
+                      <EditorHighlightsForPaintGroup />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PaintGroupHighlightMap>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/minimal/src/app/ViewModel.ts">
           <value>
             <PaintGroupHighlightMap>
               <option name="paintGroups">
