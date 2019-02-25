@@ -1,17 +1,10 @@
 import * as ko from "knockout";
 
 export class SubscribeForm {
-    public firstName: ko.Observable;
-    public lastName: ko.Observable;
-    public email: ko.Observable;
-    public enabled: ko.Observable;
-
-    public constructor() {
-        this.firstName = ko.observable('firstName');
-        this.lastName = ko.observable('lastName');
-        this.email = ko.observable('');
-        this.enabled = ko.observable(false);
-    }
+    public firstName: ko.Observable = ko.observable('firstName');
+    public lastName: ko.Observable = ko.observable('lastName');
+    public email: ko.Observable = ko.observable('');
+    public enabled: ko.Observable = ko.observable(false);
 
     public blur() {
         this.enabled(this.email.peek() !== '');
