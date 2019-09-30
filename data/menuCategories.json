@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Category #1",
+    "entries": [
+      {
+        "name": "link 1",
+        "link": "./test"
+      },
+      {
+        "name": "link 2",
+        "link": "./test"
+      }
+    ]
+  },
+  {
+    "name": "Category #2",
+    "entries": [
+      {
+        "name": "link 3",
+        "link": "./link-3"
+      }
+    ]
+  }
+]

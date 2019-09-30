@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--injected by postHtml -->
+    <include src="src/jquerySidebar/jquerySidebar.html"></include>
+    <include src="src/koSidebar/koSidebar.html"></include>
+    <include src="src/reactSidebar/reactSidebar.html"></include>
+
+    <include src="src/webComponentSidebar/menu-row/menu-row.html"></include>
+    <include src="src/webComponentSidebar/sidebar-submenu/sidebar-submenu.html"></include>
+    <include src="src/webComponentSidebar/sidebar/sidebar.html"></include>
+</head>
+<body>
+
+<script src="./bundle.js"></script>
+
+<h1>WEB-Component-Style-Approach with vanillaJS / JQuery</h1>
+
+<web-component-sidebar></web-component-sidebar>
+<hr>
+
+<h1>JQuery</h1>
+
+<sidebar-jq></sidebar-jq>
+<hr>
+
+<h1>CR-Style-Approach with Knockout</h1>
+<sidebar-ko></sidebar-ko>
+<hr>
+
+<h1>CR-Style-Approach with React</h1>
+<sidebar-react></sidebar-react>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+li {
+    padding: 20px;
+    list-style: none;
+    background-color: #27749b;
+    transition: background-color .33s;
+}
+
+li:hover {
+    background-color: #214364;
+}
+
+a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}

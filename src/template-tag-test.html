@@ -1,0 +1,100 @@
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .sidebar {
+        width: 500px;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        padding: 20px;
+        list-style: none;
+        background-color: #27749b;
+        transition: background-color .33s;
+    }
+
+    li:hover {
+        background-color: #214364;
+    }
+
+    a {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+    }
+
+</style>
+
+
+<div class="sidebar">
+    <nav>
+        <span>Category 1</span>
+        <ul data-template="tpl-menu-row:list1">
+        </ul>
+        <span>Category 2</span>
+        <ul id="rt-menu-row" data-template="tpl-menu-row:list2">
+        </ul>
+    </nav>
+</div>
+
+
+<template id="tpl-menu-row">
+    <li>
+        <a href="#" data-link="linkName" data-text="name"></a>
+    </li>
+</template>
+
+
+<script>
+
+    var data =
+        {
+            list1: [
+                {linkName: './test-1', name: 'test 1', category: 'category1'},
+                {linkName: './test-2', name: 'test 2', category: 'category1'},
+                {linkName: './test-3', name: 'test 3', category: 'category1'},
+                {linkName: './test-4', name: 'test 4', category: 'category1'},
+                {linkName: './test-5', name: 'test 5', category: 'category1'}
+            ],
+            list2: [
+                {linkName: './test-1', name: 'test 1', category: 'category2'},
+                {linkName: './test-2', name: 'test 2', category: 'category2'},
+                {linkName: './test-3', name: 'test 3', category: 'category2'},
+                {linkName: './test-4', name: 'test 4', category: 'category2'},
+                {linkName: './test-5', name: 'test 5', category: 'category2'}
+            ]
+        };
+
+
+    templateRoots = document.querySelectorAll('[data-template]');
+    for (var index = 0; index < templateRoots.length; index++) {
+        var [templateId, viewItemKey] = templateRoots[index].getAttribute('data-template').split(':');
+        var template = document.getElementById(templateId);
+        console.log([templateId, viewItemKey, template]);
+        data[viewItemKey].forEach(render.bind(null, templateRoots[index], template));
+    }
+
+    function render(root, template, dataEntry) {
+        var clone = document.importNode(template.content, true);
+
+        var textElements = clone.querySelectorAll('[data-text]');
+        for (var index = 0; index < textElements.length; index++) {
+            textElements[index].textContent = dataEntry[textElements[index].getAttribute('data-text')];
+        }
+
+        var linkElements = clone.querySelectorAll('[data-link]');
+        for (var index = 0; index < linkElements.length; index++) {
+            linkElements[index].setAttribute('href', dataEntry[linkElements[index].getAttribute('data-link')]);
+        }
+
+        root.appendChild(clone);
+    }
+
+</script>

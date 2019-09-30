@@ -1,0 +1,14 @@
+<template id="tpl-sidebar-ko">
+    <!--injected by postHtml -->
+    <link href="src/koSidebar/koSidebar.css" rel="stylesheet">
+    <div class="ko-root">
+        <nav data-bind="foreach: categories">
+            <span data-bind="text: name"></span>
+            <ul data-bind="foreach: entries">
+                <li>
+                    <a data-bind="text: name, attr: { href: link}"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</template>

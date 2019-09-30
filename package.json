@@ -1,23 +1,31 @@
 {
-  "name": "knockoutcomponentlib",
+  "name": "blogspace",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "node minimal/twig.js",
-    "build": "browserify -p [ tsify --project tsconfig.json ] --debug minimal/src/index.ts > minimal/dist/bundle.js"
+    "serve": "node_modules/.bin/http-server ./dist",
+    "build": "node_modules/.bin/browserify src/index.js > ./dist/bundle.js",
+    "build-react": "node_modules/.bin/tsc src/reactSidebar/src/index.tsx --jsx react --outDir src/reactSidebar/build",
+    "build-html": "node task/buildHtml.js",
+    "prep": "npm run build-react && npm run build && npm run build-html"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "browserify": "^16.2.3",
-    "knockout": "^3.5.0",
-    "tsify": "^4.0.1",
-    "twig": "^1.13.2",
-    "typescript": "^3.3.3333"
-  },
   "devDependencies": {
-    "@types/node": "^11.9.5"
+    "browserify": "^16.5.0",
+    "http-server": "^0.11.1",
+    "posthtml": "^0.11.6",
+    "posthtml-include": "^1.2.0",
+    "posthtml-inline-assets": "^3.0.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.3.0",
+    "jquery": "^3.4.1",
+    "knockout": "^3.5.0",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
   }
 }
