@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.3.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "knockout": "^3.5.0",
     "react": "^16.10.0",
     "react-dom": "^16.10.0"
