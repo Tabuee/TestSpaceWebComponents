@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "browserify": "^16.5.0",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "posthtml": "^0.11.6",
     "posthtml-include": "^1.2.0",
     "posthtml-inline-assets": "^3.0.0",
